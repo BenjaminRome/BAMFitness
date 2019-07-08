@@ -1,5 +1,68 @@
 $primary-color: #f2f2f2;
+$secondary-color: #252525;
+$accent-color: #1CC6FF;
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap');
 
 body {
     background: $primary-color;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
 }
+
+.wrapper {
+    width: 80%;
+    margin: auto;
+}
+
+#navbar {
+    background-color: $secondary-color;
+    display: flex;
+    align-items: center;
+
+    a {
+        color: $primary-color;
+        text-decoration: none;
+    }
+
+    a:hover, #shopping-cart:hover, #logo:hover  {
+        color: $accent-color;
+        transition: .2s;
+        cursor: pointer;
+    }
+
+    #logo {
+        font-size: 5em;
+        flex-grow: 4;
+        padding: 0 .5rem;
+        transition: .2s;
+
+    }
+
+    #navbar-page-links{
+        font-size: 2em;
+        flex-grow: 4;
+
+        a {
+            padding: 0 1.3rem;
+            transition: .2s;
+        }
+
+    }
+
+    #navbar-social-links {
+        font-size: 2em;
+        flex-grow: 1;
+
+    }
+
+    #shopping-cart {
+        font-size: 3em;
+        flex-grow: 1;
+        transition: .2s;
+
+    }
+}
+

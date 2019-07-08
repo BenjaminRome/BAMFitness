@@ -1,2 +1,41 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap");
 body {
-  background: #f2f2f2; }
+  background: #f2f2f2;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0; }
+
+.wrapper {
+  width: 80%;
+  margin: auto; }
+
+#navbar {
+  background-color: #252525;
+  display: flex;
+  align-items: center; }
+  #navbar a {
+    color: #f2f2f2;
+    text-decoration: none; }
+  #navbar a:hover, #navbar #shopping-cart:hover, #navbar #logo:hover {
+    color: #1CC6FF;
+    transition: .2s;
+    cursor: pointer; }
+  #navbar #logo {
+    font-size: 5em;
+    flex-grow: 4;
+    padding: 0 .5rem;
+    transition: .2s; }
+  #navbar #navbar-page-links {
+    font-size: 2em;
+    flex-grow: 4; }
+    #navbar #navbar-page-links a {
+      padding: 0 1.3rem;
+      transition: .2s; }
+  #navbar #navbar-social-links {
+    font-size: 2em;
+    flex-grow: 1; }
+  #navbar #shopping-cart {
+    font-size: 3em;
+    flex-grow: 1;
+    transition: .2s; }
