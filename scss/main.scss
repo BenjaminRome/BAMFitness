@@ -15,6 +15,11 @@ body {
 .wrapper {
     width: 80%;
     margin: auto;
+    overflow: hidden;
+}
+
+a {
+    color: $secondary-color;
 }
 
 // =====================================================================================
@@ -93,9 +98,9 @@ body {
         flex-grow: 1;
 
         h1 {
-            padding-top: 10rem;
+            padding-top: 9rem;
             margin: 0 0 0 50%;
-            font-size: 3em;
+            font-size: 4vw;
             font-weight: 700;
             display: inline-block;
         }
@@ -105,6 +110,7 @@ body {
             margin: 0 0 0 50%;
             font-weight: 400;
             width: 50%;
+            font-size: 1.6vw;
             display: inline-block;
         }
 
@@ -113,6 +119,7 @@ body {
             padding: 30px;
             margin: 5% 0 0 50%;
             font-weight: 700;
+            font-size: 2rem;
             text-decoration: none;
             color: $primary-color;
             background-color: $secondary-color;
@@ -123,10 +130,22 @@ body {
         .button:hover {
             background-color: $accent-color;
             color: $secondary-color;
-            transition: .3s;
-            font-size: 1.2em;
+            transition: .4s;
+            font-size: 2.2em;
             padding: 36px;
         }
+    }
+}
+
+// =====================================================================================
+//
+// OUR STORY SECTION
+// 
+// =====================================================================================
+
+.about-section {
+    p {
+        font-size: 2rem;
     }
 }
 
@@ -136,3 +155,42 @@ body {
 // 
 // =====================================================================================
 
+.blog-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .blog-post-preview {
+        max-width: 25rem;
+        display: inline-block;
+        transition: .2s;
+        flex: none;
+        padding: 1rem;
+         
+        h1 {
+            color: $primary-color;
+            background-color: $secondary-color;
+            padding: 1rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+    }
+    
+    .blog-post-preview:hover {
+        
+        h1 {
+            color: $accent-color;
+            transition: .2s;
+        }
+    }
+}
+
+
+@media (max-width: 1110px) {
+    .wrapper {
+        width: 100%;
+    }
+}
