@@ -12,7 +12,11 @@ body {
   overflow: hidden; }
 
 a {
-  color: #252525; }
+  color: #252525;
+  text-decoration: none; }
+
+.mobile-info {
+  display: none; }
 
 #navbar {
   background-color: #252525;
@@ -110,6 +114,56 @@ a {
     color: #1CC6FF;
     transition: .2s; }
 
+.footer {
+  background-color: #252525;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .footer a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 1rem;
+    transition: .2s; }
+  .footer a:hover {
+    color: #1CC6FF;
+    font-size: 2.2rem;
+    transition: .2s; }
+
 @media (max-width: 1110px) {
   .wrapper {
-    width: 100%; } }
+    width: 100%; }
+  #navbar {
+    display: none; }
+  .landing-content .landing-text h1 {
+    font-size: 8vw;
+    padding-top: 3rem; }
+  .landing-content .landing-text h2 {
+    font-size: 4vw;
+    padding-top: .2rem; }
+  .landing-content .landing-text .button {
+    padding: 15px;
+    font-size: 7vw; }
+  .landing-content .landing-text .button:hover {
+    font-size: 7vw;
+    padding: 15px; }
+  .mobile-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #252525; }
+    .mobile-info a {
+      color: #f2f2f2;
+      padding: 1rem;
+      font-size: 2rem;
+      transition: .2s; }
+    .mobile-info a:hover {
+      color: #1CC6FF;
+      transition: .2s;
+      cursor: pointer; }
+    .mobile-info span {
+      padding-bottom: .8rem; }
+      .mobile-info span a {
+        font-size: 3rem; }
+  .about-section {
+    padding: 0 3rem; } }

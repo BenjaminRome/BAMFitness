@@ -20,6 +20,11 @@ body {
 
 a {
     color: $secondary-color;
+    text-decoration: none;
+}
+
+.mobile-info {
+    display: none;
 }
 
 // =====================================================================================
@@ -188,9 +193,117 @@ a {
     }
 }
 
+// =====================================================================================
+//
+// FOOTER
+// 
+// =====================================================================================
+
+.footer {
+    background-color: $secondary-color;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    a {
+        color: $primary-color;
+        text-decoration: none;
+        font-size: 2rem;
+        padding: 1rem;
+        transition: .2s;
+    }
+
+    a:hover {
+        color: $accent-color;
+        font-size: 2.2rem;
+        transition: .2s;
+    }
+}
+
+// =====================================================================================
+//
+// MEDIA QUERIES
+// 
+// =====================================================================================
 
 @media (max-width: 1110px) {
     .wrapper {
         width: 100%;
+    }
+
+// =======================================================================
+// MOBILE NAVBAR
+// =======================================================================
+
+    #navbar {
+        display: none;
+    }
+
+// =======================================================================
+// MOBILE LANDING SECTION
+// =======================================================================
+
+    .landing-content {
+        .landing-text {
+            h1 {
+                font-size: 8vw;
+                padding-top: 3rem;
+            }
+
+            h2 {
+                font-size: 4vw;
+                padding-top: .2rem;
+            }
+
+            .button {
+                padding: 15px;
+                font-size: 7vw;
+            }
+
+            .button:hover {
+                font-size: 7vw;
+                padding: 15px;
+            }
+        }
+    }
+    
+// =======================================================================
+// MOBILE INFO SECTION
+// =======================================================================
+
+    .mobile-info {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        background-color: $secondary-color;
+
+        a {    
+            color: $primary-color;
+            padding: 1rem;
+            font-size: 2rem;
+            transition: .2s;
+        }
+
+        a:hover {
+            color: $accent-color;
+            transition: .2s;
+            cursor: pointer;
+        }
+        
+        span {
+            padding-bottom: .8rem;
+
+            a {
+                font-size: 3rem;
+            }
+        }
+    }
+
+// =======================================================================
+// MOBILE INFO SECTION
+// =======================================================================
+
+    .about-section {
+        padding: 0 3rem;
     }
 }
