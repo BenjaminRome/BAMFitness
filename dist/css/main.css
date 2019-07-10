@@ -86,7 +86,7 @@ a {
     .landing-content .landing-text .button:hover {
       background-color: #1CC6FF;
       color: #252525;
-      transition: .4s;
+      transition: .2s;
       font-size: 2.2em;
       padding: 36px; }
 
@@ -111,8 +111,10 @@ a {
     .blog-content .blog-post-preview p {
       font-size: 1.5rem; }
   .blog-content .blog-post-preview:hover h1 {
-    color: #1CC6FF;
-    transition: .2s; }
+    color: #1CC6FF; }
+  .blog-content .blog-post-preview:hover p {
+    border-bottom: #1CC6FF 5px solid;
+    margin-bottom: -5px; }
 
 .footer {
   background-color: #252525;
@@ -129,6 +131,60 @@ a {
     color: #1CC6FF;
     font-size: 2.2rem;
     transition: .2s; }
+
+.pay-heading {
+  margin: 2rem auto;
+  text-align: center;
+  font-size: 3rem;
+  color: #252525; }
+
+#payment-form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  align-items: flex-start;
+  margin: auto; }
+
+.StripeElement {
+  box-sizing: border-box;
+  height: 40px;
+  width: 100%;
+  margin: 1rem 0;
+  padding: 10px 12px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease; }
+
+.StripeElement--focus {
+  box-shadow: 0 1px 3px 0 #cfd7df; }
+
+.StripeElement--invalid {
+  border-color: #fa755a; }
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important; }
+
+.stripe-button {
+  display: inline-block;
+  padding: 20px;
+  margin: 1rem 0;
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #f2f2f2;
+  background-color: #252525;
+  border-radius: 5%;
+  transition: .3s; }
+
+.stripe-button:hover {
+  background-color: #1CC6FF;
+  color: #252525;
+  transition: .2s;
+  font-size: 1.7rem;
+  padding: 21px; }
 
 @media (max-width: 1110px) {
   .wrapper {
