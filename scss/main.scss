@@ -103,7 +103,7 @@ a {
         flex-grow: 1;
 
         h1 {
-            padding-top: 9rem;
+            padding-top: 4rem;
             margin: 0 0 0 50%;
             font-size: 4vw;
             font-weight: 700;
@@ -321,22 +321,22 @@ a {
     .landing-content {
         .landing-text {
             h1 {
-                font-size: 8vw;
+                font-size: 5vw;
                 padding-top: 3rem;
             }
 
             h2 {
-                font-size: 4vw;
+                font-size: 3vw;
                 padding-top: .2rem;
             }
 
             .button {
                 padding: 15px;
-                font-size: 7vw;
+                font-size: 4vw;
             }
 
             .button:hover {
-                font-size: 7vw;
+                font-size: 4.5vw;
                 padding: 15px;
             }
         }
@@ -354,9 +354,10 @@ a {
 
         a {    
             color: $primary-color;
-            padding: 1rem;
             font-size: 2rem;
             transition: .2s;
+            margin: .5rem 1rem 0 1rem;
+            
         }
 
         a:hover {
@@ -366,7 +367,6 @@ a {
         }
         
         span {
-            padding-bottom: .8rem;
 
             a {
                 font-size: 3rem;
@@ -381,4 +381,36 @@ a {
     .about-section {
         padding: 0 3rem;
     }
+}
+
+@media (max-width: 500px) {
+
+// =======================================================================
+// MOBILE LANDING SECTION
+// =======================================================================
+
+.landing-content {
+    .landing-text {
+        h1 {
+            font-size: 8vw;
+            padding-top: 3rem;
+        }
+
+        h2 {
+            font-size: 5vw;
+            padding-top: .2rem;
+        }
+
+        .button {
+            padding: 12px;
+            font-size: 7vw;
+        }
+
+        .button:hover {
+            font-size: 7vw;
+            padding: 12px;
+        }
+    }
+}
+
 }
