@@ -33,20 +33,28 @@ a {
   #navbar #logo {
     font-size: 5em;
     padding: 0 .5rem;
-    transition: .2s; }
+    transition: .2s;
+    flex-grow: 1; }
   #navbar #navbar-page-links {
-    font-size: 2em; }
+    font-size: 2em;
+    flex-grow: 2; }
     #navbar #navbar-page-links a {
       padding: 0 1.3rem;
       transition: .2s; }
   #navbar #navbar-social-links {
-    font-size: 2em; }
+    font-size: 2em;
+    flex-grow: 2;
+    display: flex;
+    justify-content: flex-end; }
     #navbar #navbar-social-links a {
       padding: 1rem; }
   #navbar #shopping-cart {
+    flex-grow: 1;
     font-size: 3em;
     padding-left: 1rem;
-    transition: .2s; }
+    transition: .2s;
+    display: flex;
+    justify-content: flex-end; }
 
 .landing-content {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../images/1109-Larry-Wheels-main.jpg);
@@ -124,6 +132,8 @@ a {
     .blog-content .blog-post-preview .description {
       font-size: 1.5rem;
       border-bottom: #f2f2f2 5px solid; }
+  .blog-content .blog-post-preview:nth-child(3n+3) {
+    max-width: 50rem; }
   .blog-content .blog-post-preview:hover h1 {
     color: #1CC6FF; }
   .blog-content .blog-post-preview:hover .meta-content:hover {
@@ -202,7 +212,7 @@ a {
   font-size: 1.7rem;
   padding: 21px; }
 
-@media (max-width: 1110px) {
+@media (max-width: 1126px) {
   .wrapper {
     width: 100%; }
   #navbar {
@@ -236,7 +246,9 @@ a {
     .mobile-info span a {
       font-size: 3rem; }
   .about-section {
-    padding: 0 3rem; } }
+    padding: 0 3rem; }
+  .blog-content .blog-post-preview:nth-child(3n+3) {
+    max-width: 25rem; } }
 
 @media (max-width: 500px) {
   .landing-content .landing-text h1 {

@@ -54,12 +54,14 @@ a {
         font-size: 5em;
         padding: 0 .5rem;
         transition: .2s;
+        flex-grow: 1;
 
     }
 
     #navbar-page-links{
         font-size: 2em;
-
+        flex-grow: 2; 
+        
         a {
             padding: 0 1.3rem;
             transition: .2s;
@@ -69,6 +71,10 @@ a {
 
     #navbar-social-links {
         font-size: 2em;
+        flex-grow: 2;
+        display: flex;
+        justify-content: flex-end;
+
         a {
             padding: 1rem;
         }
@@ -76,9 +82,12 @@ a {
     }
 
     #shopping-cart {
+        flex-grow: 1;
         font-size: 3em;
         padding-left: 1rem;
         transition: .2s;
+        display: flex;
+        justify-content: flex-end;
 
     }
 }
@@ -205,6 +214,10 @@ a {
             border-bottom: $primary-color 5px solid;
         }
     }
+
+    .blog-post-preview:nth-child(3n+3) {
+        max-width: 50rem;
+    }
     
     .blog-post-preview:hover {
         h1 {
@@ -327,7 +340,7 @@ a {
 // 
 // =====================================================================================
 
-@media (max-width: 1110px) {
+@media (max-width: 1126px) {
     .wrapper {
         width: 100%;
     }
@@ -407,7 +420,17 @@ a {
     .about-section {
         padding: 0 3rem;
     }
+
+    .blog-content {
+        .blog-post-preview:nth-child(3n+3) {
+            max-width: 25rem;
+        }
+    }
 }
+
+
+
+
 
 @media (max-width: 500px) {
 
@@ -415,28 +438,27 @@ a {
 // MOBILE LANDING SECTION
 // =======================================================================
 
-.landing-content {
-    .landing-text {
-        h1 {
-            font-size: 8vw;
-            padding-top: 3rem;
-        }
+    .landing-content {
+        .landing-text {
+            h1 {
+                font-size: 8vw;
+                padding-top: 3rem;
+            }
 
-        h2 {
-            font-size: 5vw;
-            padding-top: .2rem;
-        }
+            h2 {
+                font-size: 5vw;
+                padding-top: .2rem;
+            }
 
-        .button {
-            padding: 12px;
-            font-size: 7vw;
-        }
+            .button {
+                padding: 12px;
+                font-size: 7vw;
+            }
 
-        .button:hover {
-            font-size: 7vw;
-            padding: 12px;
+            .button:hover {
+                font-size: 7vw;
+                padding: 12px;
+            }
         }
     }
-}
-
 }
