@@ -108,7 +108,7 @@ a {
   justify-content: center;
   flex-wrap: wrap; }
   .blog-content .blog-post-preview {
-    width: 25rem;
+    width: 26rem;
     display: inline-block;
     transition: .4s;
     flex: none;
@@ -134,7 +134,11 @@ a {
       font-size: 1.2rem;
       color: #1CC6FF;
       padding: none;
-      border: none; }
+      border: none;
+      flex-wrap: wrap;
+      display: flex; }
+      .blog-content .blog-post-preview .meta-content p {
+        margin: 1rem 1rem; }
     .blog-content .blog-post-preview .description {
       font-size: 1.4rem;
       margin: 0;
@@ -162,8 +166,16 @@ a {
     transition: .25s;
     overflow: hidden;
     position: relative;
+    -webkit-animation-name: slide-left;
+    -webkit-animation-duration: .6s;
     animation-name: slide-left;
     animation-duration: .6s; }
+
+@-webkit-keyframes slide-left {
+  0% {
+    left: -1000px; }
+  100% {
+    left: 0px; } }
 
 @keyframes slide-left {
   0% {
@@ -175,8 +187,16 @@ a {
     transition: .25s;
     color: #1CC6FF;
     position: relative;
+    -webkit-animation-name: slide-up;
+    -webkit-animation-duration: .8s;
     animation-name: slide-up;
-    animation-duration: .6s; }
+    animation-duration: .8s; }
+
+@-webkit-keyframes slide-up {
+  0% {
+    bottom: -1000px; }
+  100% {
+    bottom: 0px; } }
 
 @keyframes slide-up {
   0% {
@@ -188,7 +208,8 @@ a {
   background-color: #252525;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  width: 100%; }
   .footer a {
     color: #f2f2f2;
     text-decoration: none;
@@ -254,7 +275,7 @@ a {
   font-size: 1.7rem;
   padding: 21px; }
 
-@media (max-width: 1126px) {
+@media (max-width: 1356px) {
   .wrapper {
     width: 100%; }
   #navbar {
@@ -275,22 +296,25 @@ a {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    align-items: center;
     background-color: #252525; }
     .mobile-info a {
       color: #f2f2f2;
       font-size: 2rem;
       transition: .2s;
-      margin: .5rem 1rem 0 1rem; }
+      margin: 0 1rem; }
     .mobile-info a:hover {
       color: #1CC6FF;
       transition: .2s;
       cursor: pointer; }
     .mobile-info span a {
       font-size: 3rem; }
+    .mobile-info #shopping-cart {
+      font-size: 3rem; }
   .about-section {
     padding: 0 3rem; }
   .blog-content .blog-post-preview:nth-child(3n+3) {
-    max-width: 25rem; } }
+    width: 26rem; } }
 
 @media (max-width: 500px) {
   .landing-content .landing-text h1 {
@@ -304,4 +328,8 @@ a {
     font-size: 7vw; }
   .landing-content .landing-text .button:hover {
     font-size: 7vw;
-    padding: 12px; } }
+    padding: 12px; }
+  .blog-content .blog-post-preview {
+    max-width: 100vw; }
+  .blog-content .blog-post-preview:nth-child(3n+3) {
+    max-width: 100vw; } }
