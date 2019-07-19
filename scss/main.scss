@@ -177,9 +177,9 @@ a {
     flex-wrap: wrap;
 
     .blog-post-preview {
-        max-width: 25rem;
+        width: 25rem;
         display: inline-block;
-        transition: .2s;
+        transition: .4s;
         flex: none;
         padding: 1rem;
 
@@ -187,6 +187,12 @@ a {
             background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0,0,0,0.1)), url(../images/1109-Larry-Wheels-main.jpg);
             background-size: cover;
             height: 25vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            transition: .3s;
+            overflow: hidden;
         }
          
         h1 {
@@ -210,27 +216,71 @@ a {
         }
 
         .description {
-            font-size: 1.5rem;
-            border-bottom: $primary-color 5px solid;
+            font-size: 1.4rem;
+            margin: 0;
+            padding: 0 1em;
+            color: $primary-color;
+            opacity: 0;
+            transition: .2s;
+        }
+
+        .read-more {
+            font-size: 1.4rem;
+            margin: 0;
+            padding: 0 1em;
+            color: $accent-color;
+            opacity: 0;
+            transition: .2s;
         }
     }
 
     .blog-post-preview:nth-child(3n+3) {
-        max-width: 50rem;
+        width: 50rem;
     }
     
     .blog-post-preview:hover {
+
         h1 {
             color: $accent-color;
+            transition: .25s;
         }
 
-        .meta-content:hover {
-            padding: none;
-            border-bottom: none;
+        .blog-post-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5)), url(../images/1109-Larry-Wheels-main.jpg);        
+            transition: .5s;
         }
+            
 
         .description {
-            border-bottom: $accent-color 5px solid;
+            opacity: 1;
+            transition: .25s;
+            overflow: hidden;
+
+            position: relative;
+            animation-name: slide-left;
+            animation-duration: .6s;
+
+
+            @keyframes slide-left {
+            0%   {left:-1000px;}
+            100% {left:0px;}
+            }
+        }
+
+        .read-more {
+            opacity: 1;
+            transition: .25s;
+            color: $accent-color;
+
+            position: relative;
+            animation-name: slide-up;
+            animation-duration: .6s;
+
+
+            @keyframes slide-up {
+            0%   {bottom:-1000px;}
+            100% {bottom:0px;}
+            }
         }
     }
 }
